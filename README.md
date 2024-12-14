@@ -114,7 +114,8 @@ With [AutoRAG](https://github.com/Marker-Inc-Korea/AutoRAG), you can make this k
 # Installation
 
 ```bash
-pip install -r requirements.txt
+pip install uv
+uv sync
 ```
 
 # Running the project
@@ -123,7 +124,7 @@ pip install -r requirements.txt
 2. Run evaluator with the following command.
 
 ```bash
-python main.py --project_dir ./project_dir
+uv run main.py --project_dir ./project_dir
 ```
 
 3. Check the result in the project_dir folder.

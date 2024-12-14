@@ -166,3 +166,5 @@ data/**/*.csv
 data/*.csv
 
 project_dir/
+
+.python_version
