@@ -1,0 +1,23 @@
+node_lines:
+- node_line_name: retrieve_node_line
+  nodes:
+    - node_type: retrieval
+      strategy:
+        metrics: [retrieval_f1, retrieval_recall, retrieval_precision, retrieval_map, retrieval_mrr, retrieval_ndcg]
+      top_k: [1, 3, 5, 10, 50]
+      modules:
+        - module_type: vectordb
+          embedding_model:
+            - openai
+
+    - node_type: passage_reranker
+      strategy:
+        metrics: [retrieval_f1, retrieval_recall, retrieval_precision, retrieval_map, retrieval_mrr, retrieval_ndcg]
+      top_k: [1, 3, 5]
+      modules:
+        - module_type: sentence_transformer_reranker
+          batch: 32
+          model_name: sigridjineth/ko-reranker-v1.1-preview
+          max_length: 512
+          trust_remote_code: True
+
