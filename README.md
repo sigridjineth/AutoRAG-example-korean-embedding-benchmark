@@ -128,3 +128,10 @@ uv run main.py --project_dir ./project_dir
 ```
 
 3. Check the result in the project_dir folder.
+
+## Before opening up the pull request
+* Kindly request to run formatter with the following command.
+```
+uv run ruff format
+uv run ruff check
+```
