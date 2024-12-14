@@ -358,10 +358,20 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "autorag", extra = ["gpu"] },
+    { name = "click" },
+    { name = "llama-index-embeddings-cohere" },
+    { name = "llama-index-embeddings-upstage" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "autorag", extras = ["gpu"], specifier = ">=0.3.12" }]
+requires-dist = [
+    { name = "autorag", extras = ["gpu"], specifier = ">=0.2.11" },
+    { name = "click", specifier = ">=8.1.7" },
+    { name = "llama-index-embeddings-cohere", specifier = ">=0.3" },
+    { name = "llama-index-embeddings-upstage", specifier = ">=0.2.1" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
 
 [[package]]
 name = "backoff"
@@ -2377,6 +2387,19 @@ wheels = [
 ]
 
 [[package]]
+name = "llama-index-embeddings-cohere"
+version = "0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cohere" },
+    { name = "llama-index-core" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6c/ff/61a9b3069172261d35aac0921f0491b3f1577c2020660ecf5aaef3f96d07/llama_index_embeddings_cohere-0.3.tar.gz", hash = "sha256:e328dcb1ac7ec10e2873b2eb32eee468851229d536440455967ec4f8d2efee11", size = 4449 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/96/01/a7170c7fa802c140cf70df1c6747371138d8201d3550f982c6b1b306aa69/llama_index_embeddings_cohere-0.3-py3-none-any.whl", hash = "sha256:634897516d2d13a00c76a1379d3b7aac4e1c43f9d603565616de0940e568c610", size = 4712 },
+]
+
+[[package]]
 name = "llama-index-embeddings-huggingface"
 version = "0.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2401,6 +2424,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/85/06/35969946f229212c17133ca5aa446824381e309141f8ae952d0d40bfa8f5/llama_index_embeddings_openai-0.2.5.tar.gz", hash = "sha256:0047dd71d747068645ed728c29312aa91b65bbe4c6142180034c64dfc5c6f6e8", size = 5395 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a4/4e/2cabf16c4ef7dda74c233d14d017ba57e933c4dea8a9807b90d145177e88/llama_index_embeddings_openai-0.2.5-py3-none-any.whl", hash = "sha256:823c8311e556349ba19dda408a64a314fa3dafe0e5759709c54d33a0269aa6ba", size = 6089 },
+]
+
+[[package]]
+name = "llama-index-embeddings-upstage"
+version = "0.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "llama-index-core" },
+    { name = "llama-index-embeddings-openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/01/07/5a4e5325f1d5cfa064118a3ad7003629e8b4dec6204262364676b2c99458/llama_index_embeddings_upstage-0.2.1.tar.gz", hash = "sha256:8469d3e847da1034bd4ffddef302d313f64cec0455184c641c1996208a2bcc60", size = 4666 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f2/e9/1eb8abb6d9ac53f8bc1ae015879c9d4ae104d8ef267881dda1429fb77586/llama_index_embeddings_upstage-0.2.1-py3-none-any.whl", hash = "sha256:0eff2ec018288b92dc8a437cc1501eb7b01a16e0b4ac23d865015309d2c1947b", size = 4985 },
 ]
 
 [[package]]
