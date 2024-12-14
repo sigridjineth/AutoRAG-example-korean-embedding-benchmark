@@ -129,6 +129,12 @@ uv run main.py --project_dir ./project_dir
 
 3. Check the result in the project_dir folder.
 
+* Note: By default, the evaluation uses embedding_benchmark.yaml. If you’d like to use a different configuration file—such as a custom reranker or trust settings—simply pass it using the --config option:
+```
+# Example: It relies on a static version of OpenAI embeddings here to test and benchmark rerankers consistently.
+uv run main.py --project_dir ./project_dir --config ./reranker_benchmark.yaml
+```
+
 ## Before opening up the pull request
 * Kindly request to run formatter with the following command.
 ```

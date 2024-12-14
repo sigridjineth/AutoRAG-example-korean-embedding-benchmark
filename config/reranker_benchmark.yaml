@@ -17,7 +17,7 @@ node_lines:
       modules:
         - module_type: sentence_transformer_reranker
           batch: 32
-          model_name: Alibaba-NLP/gte-multilingual-reranker-base
+          model_name: sigridjineth/ko-reranker-v1.1-preview
           max_length: 512
           trust_remote_code: True
 

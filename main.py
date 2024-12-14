@@ -16,7 +16,7 @@ data_path = os.path.join(root_path, "data")
 @click.option(
     "--config",
     type=click.Path(exists=True),
-    default=os.path.join(root_path, "config", "reranker_benchmark.yaml"),
+    default=os.path.join(root_path, "config", "embedding_benchmark.yaml"),
 )
 @click.option(
     "--qa_data_path",
